@@ -17,17 +17,11 @@ public class Ponto{
 
 	public static void main(String[] args){
 		Ponto p1 = new Ponto();
-		p1.setX(10.0);
-		p1.setY(20.0);
+		p1.setX(0.0);
+		p1.setY(3.0);
 		Ponto p2 = new Ponto();
-		p2.setX(15.0);
-		p2.setY(30.0);
-		System.out.println(p1.getX() + "-" + p1.getY());
-		System.out.println(p2.getX() + "-" + p2.getY());
-		Ponto p3 = new Ponto();
-		p3.x = 50; p3.y = 70;
-		p3 = p1;
-		System.out.println(p3.x + "-" + p3.y);
-		Ponto p4 = p3;
+		p2.setX(4.0);
+		p2.setY(0.0);
+		System.out.println(Math.sqrt(Math.pow((p1.getX()-p2.getX()),2)+Math.pow((p1.getY()-p2.getY()),2)));
 	}
 }
