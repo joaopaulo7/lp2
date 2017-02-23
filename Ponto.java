@@ -1,5 +1,9 @@
 public class Ponto{
 	private double x,y;
+
+	public Ponto(){
+		System.out.println("construtor");
+	}
 	public void  setX(double novo){
 		this.x = novo;
 	}
