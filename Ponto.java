@@ -26,6 +26,10 @@ public class Ponto{
 		Ponto p2 = new Ponto();
 		p2.setX(3.0);
 		p2.setY(5.0);
-		System.out.println(Math.sqrt(Math.pow((p1.getX()-p2.getX()),2)+Math.pow((p1.getY()-p2.getY()),2)));
+		Reta r1 = new Reta();
+		r1.setP1(p1);
+		r1.setP2(p2);
+		System.out.println(r1.calcEpot());
+		System.out.println(r1.calcArea());
 	}
 }

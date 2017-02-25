@@ -12,4 +12,10 @@ public class Reta{
 	public Ponto getP2(){
 		return this.p2;
 	}
+	public double calcEpot(){
+		return (Math.sqrt(Math.pow((p1.getX()-p2.getX()),2)+Math.pow((p1.getY()-p2.getY()),2)));
+	}
+	public double calcArea(){
+		return (this.p1.getY()+this.p2.getY())*(Math.abs(this.p1.getX()-this.p2.getX())/2);
+	}
 }
