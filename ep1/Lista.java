@@ -1,6 +1,15 @@
 public class Lista{
 	private No cabeca, pe;
 
+	public void mostrar(){
+		No cursor = cabeca;
+                while(cursor != null)
+                {
+                        System.out.println(cursor.getItem());
+			cursor = cursor.getProx();
+                }
+	}
+
 	public void inserir(int item){
 		No novo = new No();
 		novo.setItem(item);
@@ -8,20 +17,25 @@ public class Lista{
 		{
 			this.pe = novo;
 			cabeca = pe;
+		}else
+		{
+			novo.setAnt(pe);
+			pe.setProx(novo);
+			pe=novo;
 		}
-		novo.st
 	}
 	public void remover(){
 		this.pe = pe.getAnt();
-		this.pe.setProx(null);
+		if(pe == null)
+			cabeca = null;
+		else
+			this.pe.setProx(null);
 	}
 
 	public  boolean pesquisar(int pesquisado){
 		No cursor = cabeca;
-		while(cursor.getItem() != pesquisado && cursor != null)
-		{
+		while(cursor != null && cursor.getItem() != pesquisado)
 			cursor = cursor.getProx();
-		}
 		if(cursor == null)
 		{
 			return false;
